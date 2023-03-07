@@ -5,9 +5,7 @@
       <div class="container">
         <!-- Logo -->
         <h1 id="logo">
-          <a href="#"
-            ><img src="../assets/images/Xu.png" alt="Your Logo"
-          /></a>
+          <a href="#"><img src="../assets/images/Xu.png" alt="Your Logo" /></a>
         </h1>
         <!-- Navbar links -->
         <ul class="nav-menu">
@@ -213,12 +211,12 @@ export default {
     switchTheme(e) {
       if (e.target.checked) {
         document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark"); //add this
+        localStorage.setItem("theme", "dark");
       } else {
         document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light"); //add this
+        localStorage.setItem("theme", "light");
       }
-    },  
+    },
   },
   mounted() {
     this.hamburger = document.querySelector(".hamburger");
