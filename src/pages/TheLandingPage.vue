@@ -59,6 +59,26 @@
     </section>
   </header>
 
+  <section id="skills" class="project-container container">
+    <div class="division"></div>
+    <div class="content-text">
+      <h2>Skills</h2>
+      <p>Advanced knowledge on these areas</p>
+    </div>
+    <article class="skill">
+      <div class="chips">
+        <div class="skill-info">
+          <div class="skill-title" v-for="item in 7">
+            <img src="../assets/images/html.png" alt="">
+            <h2>HTML</h2>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+
   <!-- Projects -->
   <section id="projects" class="project-container container">
     <div class="division"></div>
@@ -75,7 +95,7 @@
             <h3>Severyanochka</h3>
             <p>Vue 3, Vite, Tailwind</p>
           </div>
-
+          
           <div class="project-link">
             <a href="https://github.com/Umrbek99/severyanochka" target="_blank"
               ><i class="fab fa-github"></i
