@@ -10,7 +10,7 @@
         <!-- Navbar links -->
         <ul class="nav-menu">
           <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-          <li><a class="nav-link" href="">SKILLS</a></li>
+          <li><a class="nav-link" href="#skills">SKILLS</a></li>
           <li><a class="nav-link" href="#">CONTACT</a></li>
           <li><a class="nav-link" href="#">BlOG</a></li>
           <li>
@@ -51,7 +51,7 @@
         </p>
       </div>
       <a
-        href="https://github.com/CommunityPro/portfolio-html"
+        href="https://github.com/Umrbek99"
         class="btn btn-secondary"
         target="_blank"
         >Connect With Me</a
@@ -63,21 +63,95 @@
     <div class="division"></div>
     <div class="content-text">
       <h2>Skills</h2>
-      <p>Advanced knowledge on these areas</p>
+      <p>Advanced knowledge on front-end development</p>
     </div>
     <article class="skill">
       <div class="chips">
         <div class="skill-info">
-          <div class="skill-title" v-for="item in 7">
-            <img src="../assets/images/html.png" alt="">
-            <h2>HTML</h2>
+          <!-- skill 1 -->
+          <div class="skill-title">
+            <img src="../assets/images/html5.png" alt="" />
+            <h2>html</h2>
+          </div>
+
+          <!-- skill 2 -->
+          <div class="skill-title">
+            <img src="../assets/images/css1.png" alt="" />
+            <h2>CSS</h2>
+          </div>
+
+          <!-- skill 3 -->
+          <div class="skill-title">
+            <img src="../assets/images/js3.png" alt="" />
+            <h2>JS</h2>
+          </div>
+
+          <!-- skill 4 -->
+          <div class="skill-title">
+            <img src="../assets/images/tailwind.png" alt="" />
+            <h2>Tailwind</h2>
+          </div>
+
+          <!-- skill 5 -->
+          <div class="skill-title">
+            <img src="../assets/images/boostrap2.png" alt="" />
+            <h2>Bootstrap</h2>
+          </div>
+
+          <!-- skill 6 -->
+          <div class="skill-title">
+            <img src="../assets/images/vuejs.png" alt="" />
+            <h2>Vue 3</h2>
           </div>
         </div>
       </div>
     </article>
 
-  </section>
+    <div class="content-text">
+      <p>Basic knowledge on back-end development</p>
+    </div>
+    <article class="skill">
+      <div class="chips">
+        <div class="skill-info">
+          <!-- skill 1 -->
+          <div class="skill-title">
+            <img src="../assets/images/java.png" alt="" />
+            <h2>Java</h2>
+          </div>
 
+          <!-- skill 2 -->
+          <div class="skill-title">
+            <img src="../assets/images/postgres.png" alt="" />
+            <h2>Postgres</h2>
+          </div>
+
+          <!-- skill 3 -->
+          <div class="skill-title">
+            <img src="../assets/images/spring.png" alt="" />
+            <h2>Spring</h2>
+          </div>
+
+          <!-- skill 4 -->
+          <div class="skill-title">
+            <img src="../assets/images/thymeleaf.png" alt="" />
+            <h2>Thymeleaf</h2>
+          </div>
+
+          <!-- skill 5 -->
+          <div class="skill-title">
+            <img src="../assets/images/github1.png" alt="" />
+            <h2>Github</h2>
+          </div>
+
+          <!-- skill 6 -->
+          <div class="skill-title">
+            <img src="../assets/images/docker3.png" alt="" />
+            <h2>Docker</h2>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
 
   <!-- Projects -->
   <section id="projects" class="project-container container">
@@ -95,7 +169,7 @@
             <h3>Severyanochka</h3>
             <p>Vue 3, Vite, Tailwind</p>
           </div>
-          
+
           <div class="project-link">
             <a href="https://github.com/Umrbek99/severyanochka" target="_blank"
               ><i class="fab fa-github"></i
@@ -290,8 +364,22 @@ export default {
   --bg-secondary: #000000;
   --card-background: #f4f4f4;
   --bg-secondary-two: #111111;
+  --bg-oxford-blue: rgb(255, 255, 255);
 
+  /* Gradients */
+  --gradient-1: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+  --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
+  --gradient-3: linear-gradient(0deg, #000d1a, transparent);
+
+  /* Transitions */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+  /* shadows */
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  --shadow-2: 0px 3px 20px hsla(180, 90%, 43%, 0.2);
 
   /* Font Weight */
   --weight-small: 400;
@@ -314,6 +402,8 @@ export default {
   --card-background: #111111;
   --bg-secondary-two: #f4f4f4;
   --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
+
+  --bg-oxford-blue: rgb(0, 0, 0);
 }
 
 html {
@@ -445,6 +535,46 @@ body {
 #projects .btn {
   align-self: center;
   margin: 2rem 0;
+}
+
+.skill-info {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+}
+
+.skill-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: var(--radius-16);
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+}
+
+.skill-title:is(:hover, :focus-visible) {
+  box-shadow: var(--shadow-2);
+  background-image: linear-gradient(
+      var(--bg-oxford-blue),
+      var(--bg-oxford-blue)
+    ),
+    var(--gradient-1);
+  background-clip: padding-box, border-box;
+  border-color: transparent;
+  transform: translateY(-2px);
+  transition: var(--transition-1);
+}
+
+.skill-title img {
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+}
+
+.skill-title h2 {
+  font-size: 14px;
 }
 
 .project {

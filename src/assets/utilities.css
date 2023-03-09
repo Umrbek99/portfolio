@@ -164,22 +164,6 @@ h2::selection {
   background: url(../assets/images/portfolio.png) center center/cover;
 }
 
-.skill-title {
-  display: inline-flex;
-  justify-content: center;
-  justify-items: center;
-  flex-wrap: wrap;
-  margin-right: 4px;
-  border: 1px solid gray;
-  padding: 10px 15px 10px 15px;
-  border-radius: 5px;
-}
-
-.skill-title img{
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-}
 
 
 /* Media Queries */
