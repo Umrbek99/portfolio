@@ -59,6 +59,7 @@
     </section>
   </header>
 
+  <!-- Skills -->
   <section id="skills" class="project-container container">
     <div class="division"></div>
     <div class="content-text">
@@ -113,37 +114,37 @@
     <article class="skill">
       <div class="chips">
         <div class="skill-info">
-          <!-- skill 1 -->
+          <!-- skill 7 -->
           <div class="skill-title">
             <img src="../assets/images/java.png" alt="" />
             <h2>Java</h2>
           </div>
 
-          <!-- skill 2 -->
+          <!-- skill 8 -->
           <div class="skill-title">
             <img src="../assets/images/postgres.png" alt="" />
             <h2>Postgres</h2>
           </div>
 
-          <!-- skill 3 -->
+          <!-- skill 9 -->
           <div class="skill-title">
             <img src="../assets/images/spring.png" alt="" />
             <h2>Spring</h2>
           </div>
 
-          <!-- skill 4 -->
+          <!-- skill 10 -->
           <div class="skill-title">
             <img src="../assets/images/thymeleaf.png" alt="" />
             <h2>Thymeleaf</h2>
           </div>
 
-          <!-- skill 5 -->
+          <!-- skill 11 -->
           <div class="skill-title">
             <img src="../assets/images/github1.png" alt="" />
             <h2>Github</h2>
           </div>
 
-          <!-- skill 6 -->
+          <!-- skill 12 -->
           <div class="skill-title">
             <img src="../assets/images/docker3.png" alt="" />
             <h2>Docker</h2>
@@ -262,6 +263,32 @@
     ></a>
   </section>
 
+  <!-- Contact form -->
+  <section id="contact" class="project-container container">
+    <div class="division"></div>
+    <div class="content-text">
+      <h2>Contact me</h2>
+      <p>Any questions? Message me!</p>
+    </div>
+    <div class="contact-form">
+      <label for="">NAME</label>
+      <input v-model="name" type="text" placeholder="daniel" />
+      <label for="">EMAIL</label>
+      <input v-model="email" type="text" placeholder="example@gmail.com" />
+      <label for="">MESSAGE</label>
+      <textarea
+        v-model="description"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="You're hired check your email"
+      ></textarea>
+      <div class="form-btn">
+        <button @click="sendMessage()">Send</button>
+      </div>
+    </div>
+  </section>
+
   <footer id="footer">
     <div class="container">
       <a href="mailto:communitypro47@gmail.com"
@@ -291,9 +318,16 @@ export default {
       navMenu: null,
       navLink: null,
       toggleSwitch: null,
+      name: "",
+      email: "",
+      description: "",
     };
   },
   methods: {
+    sendMessage() {
+      console.log(this.message.name + this.message.email + this.message.description);
+    },
+
     mobileMenu() {
       this.hamburger.classList.toggle("active");
       this.navMenu.classList.toggle("active");
@@ -584,6 +618,10 @@ body {
   grid-gap: 0.9rem;
 }
 
+.card {
+  border: 1px solid var(--bg-secondary);
+}
+
 .card .project-bio p {
   font-size: 0.83rem;
 }
@@ -607,6 +645,70 @@ body {
   position: relative;
   top: 160px;
   left: 10px;
+}
+
+/* Contact form */
+.contact-form {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 5px;
+}
+
+.contact-form label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-form input {
+  padding: 15px 15px;
+  outline: none;
+
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+  /* 293745 */
+  background-color: var(--card-background);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.contact-form textarea {
+  padding: 15px 15px;
+  background-color: var(--card-background);
+  font-size: 20px;
+  color: var(--bg-secondary);
+  outline: none;
+
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+
+  resize: vertical;
+  background-color: var(--card-background);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form button {
+  width: 140px;
+  height: 50px;
+  background: var(--primary-color);
+  border-radius: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* Footer */
