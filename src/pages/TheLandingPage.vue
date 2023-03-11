@@ -11,8 +11,8 @@
         <ul class="nav-menu">
           <li><a class="nav-link" href="#projects">PROJECTS</a></li>
           <li><a class="nav-link" href="#skills">SKILLS</a></li>
-          <li><a class="nav-link" href="#">CONTACT</a></li>
-          <li><a class="nav-link" href="#">BlOG</a></li>
+          <li><a class="nav-link" href="#contact">CONTACT</a></li>
+          <!-- <li><a class="nav-link" href="#">BlOG</a></li> -->
           <li>
             <a class="nav-link btn btn-primary" href="#"
               >RESUME <i class="fas fa-arrow-right"></i
@@ -50,12 +50,7 @@
           web development, code quality and best practises.
         </p>
       </div>
-      <a
-        href="https://github.com/Umrbek99"
-        class="btn btn-secondary"
-        target="_blank"
-        >Connect With Me</a
-      >
+      <a href="#contact" class="btn btn-secondary">Connect With Me</a>
     </section>
   </header>
 
@@ -186,13 +181,17 @@
       <div href="" class="card">
         <div class="project-info">
           <div class="project-bio">
-            <h3>Project Two</h3>
-            <p>React, Redux, SASS</p>
+            <h3>Vue 3</h3>
+            <p>Html, Css, Js</p>
           </div>
 
           <div class="project-link">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            <a href="https://github.com/Umrbek99/wren" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://wren-app.netlify.app/" target="_blank"
+              ><i class="fas fa-globe"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -201,13 +200,17 @@
       <div href="" class="card">
         <div class="project-info">
           <div class="project-bio">
-            <h3>Project Three</h3>
-            <p>React, Redux, SASS</p>
+            <h3>Blogy</h3>
+            <p>Html, Css, Javascript</p>
           </div>
 
           <div class="project-link">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            <a href="https://github.com/Umrbek99/blogy" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://blogy-app.netlify.app/" target="_blank"
+              ><i class="fas fa-globe"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -216,13 +219,15 @@
       <div href="" class="card">
         <div class="project-info">
           <div class="project-bio">
-            <h3>Project Four</h3>
-            <p>React, Redux, SASS</p>
+            <h3>PC-SHOP</h3>
+            <p>Old website build using angular</p>
           </div>
 
           <div class="project-link">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="https://pc-shop-app.netlify.app/" target="_blank"
+              ><i class="fas fa-globe"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -231,13 +236,15 @@
       <div href="" class="card">
         <div class="project-info">
           <div class="project-bio">
-            <h3>Project Five</h3>
-            <p>React, Redux, SASS</p>
+            <h3>Blue Sky</h3>
+            <p>Old website build using angular</p>
           </div>
 
           <div class="project-link">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="https://app-angular-blue.netlify.app/" target="_blank"
+              ><i class="fas fa-globe"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -246,21 +253,21 @@
       <div href="" class="card">
         <div class="project-info">
           <div class="project-bio">
-            <h3>Project Six</h3>
-            <p>React, Redux, SASS</p>
+            <h3>Portfolio (old)</h3>
+            <p>Old portfolio app build with Angular</p>
           </div>
 
           <div class="project-link">
             <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            <a href="https://ecstatic-joliot-4fa2a1.netlify.app/"
+              ><i class="fas fa-globe"></i
+            ></a>
           </div>
         </div>
       </div>
     </article>
 
-    <a href="#" class="btn btn-secondary" target="_blank"
-      >See More <i class="fas fa-arrow-right"></i
-    ></a>
+    <a href="#projects" class="btn btn-secondary">More projects coming soon</a>
   </section>
 
   <!-- Contact form -->
@@ -271,17 +278,18 @@
       <p>Any questions? Message me!</p>
     </div>
     <div class="contact-form">
+      <p v-if="isCorrect">{{ message }}</p>
       <label for="">NAME</label>
-      <input v-model="name" type="text" placeholder="daniel" />
+      <input v-model="fullname" type="text" placeholder="asdasd ..." />
       <label for="">EMAIL</label>
-      <input v-model="email" type="text" placeholder="example@gmail.com" />
+      <input v-model="email" type="text" placeholder="example@gmail.com..." />
       <label for="">MESSAGE</label>
       <textarea
         v-model="description"
         id=""
         cols="30"
         rows="10"
-        placeholder="You're hired check your email"
+        placeholder="some message..."
       ></textarea>
       <div class="form-btn">
         <button @click="sendMessage()">Send</button>
@@ -291,7 +299,7 @@
 
   <footer id="footer">
     <div class="container">
-      <a href="mailto:communitypro47@gmail.com"
+      <a href="mailto:umrbekxudoyberganovpro@gmail.com"
         >umrbekxudoyberganovpro@gmail.com</a
       >
       <!-- Social links -->
@@ -310,22 +318,56 @@
     </div>
   </footer>
 </template>
+
 <script>
+import { useToast } from "vue-toastification";
 export default {
-  date() {
+  data() {
     return {
       hamburger: null,
       navMenu: null,
       navLink: null,
       toggleSwitch: null,
-      name: "",
-      email: "",
-      description: "",
+      fullname: null,
+      email: null,
+      description: null,
+      message: null,
+      isCorrect: false,
     };
   },
   methods: {
-    sendMessage() {
-      console.log(this.message.name + this.message.email + this.message.description);
+    async sendMessage() {
+      const toast = useToast();
+      const product = {};
+      product.fullname = this.fullname;
+      product.email = this.email;
+      product.description = this.description;
+
+      if (
+        product.fullname === null ||
+        product.email === null ||
+        product.description === null
+      ) {
+        toast.error("fill the form please!", { timeout: 2000 });
+        return;
+      }
+
+      // const res = await fetch(
+      //   "https://portfolio-4678c-default-rtdb.firebaseio.com/products.json",
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       'Content-Type':'application/json'
+      //     },
+      //     body: JSON.stringify(product)
+      //   }
+      // )
+      toast.success(`${product.fullname} your message sended succesfully`, {
+        timeout: 2000,
+      });
+      this.fullname = "";
+      this.email = "";
+      this.description = "";
     },
 
     mobileMenu() {
