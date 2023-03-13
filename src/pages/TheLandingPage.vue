@@ -280,7 +280,7 @@
     <div class="contact-form">
       <p v-if="isCorrect">{{ message }}</p>
       <label for="">NAME</label>
-      <input v-model="fullname" type="text" placeholder="asdasd ..." />
+      <input v-model="fullname" type="text" placeholder="name..." />
       <label for="">EMAIL</label>
       <input v-model="email" type="text" placeholder="example@gmail.com..." />
       <label for="">MESSAGE</label>
@@ -342,7 +342,7 @@ export default {
       product.fullname = this.fullname;
       product.email = this.email;
       product.description = this.description;
-
+      
       if (
         product.fullname === null ||
         product.email === null ||
@@ -352,16 +352,16 @@ export default {
         return;
       }
 
-      // const res = await fetch(
-      //   "https://portfolio-4678c-default-rtdb.firebaseio.com/products.json",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       'Content-Type':'application/json'
-      //     },
-      //     body: JSON.stringify(product)
-      //   }
-      // )
+      const res = await fetch(
+        "https://portfolio-4678c-default-rtdb.firebaseio.com/products.json",
+        {
+          method: "POST",
+          headers: {
+            'Content-Type':'application/json'
+          },
+          body: JSON.stringify(product)
+        }
+      )
       toast.success(`${product.fullname} your message sended succesfully`, {
         timeout: 2000,
       });
